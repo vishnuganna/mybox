@@ -1,0 +1,33 @@
+<aura:component controller ="eAccountDeck" implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    
+    <aura:handler name="init" action="{!c.getAccountList}" value="{!this}" />
+    <aura:attribute name="accountList" type="List" />
+    
+    
+    <div class="slds-grid slds-gutters slds-wrap">
+        
+        <aura:iteration items="{!v.accountList}" var="account">
+            
+            
+            <div class="slds-col slds-size_4-of-12">
+                <lightning:card footer="Card Footer" title="Hello">
+                    <p class="slds-p-horizontal_small">            
+                        
+                        {!account.Name} 
+                        {!account.Industry}     
+                    </p>  
+                </lightning:card>
+                <span>
+                </span>
+            </div>
+            
+        </aura:iteration>
+    </div>
+    <!-- outputfield used to output the record field data inside recordViewForm -->
+    
+    
+    
+    
+    
+    
+</aura:component>

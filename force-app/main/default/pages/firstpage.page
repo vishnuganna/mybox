@@ -1,0 +1,7 @@
+<apex:page standardcontroller="Account">
+    <apex:form >
+        <apex:pageBlock Title="Hello {!$User.LastName}!">
+        </apex:pageBlock>  
+         <apex:detail />
+          </apex:form>
+</apex:page>

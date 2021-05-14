@@ -1,0 +1,5 @@
+<aura:component >
+    <aura:attribute name ="message" type ="String" default= "Vishnu Ganna"/>
+    Hello World
+    <c:HelloWorldCompaonent2 message1= "{! v.message }" />           
+</aura:component>

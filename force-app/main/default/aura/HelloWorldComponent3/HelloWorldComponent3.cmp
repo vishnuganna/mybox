@@ -1,0 +1,5 @@
+<aura:component >
+	    <aura:attribute name ="message3" type ="String" default ="component3"/>
+	{!v.message3}
+    <c:HellowWorldComponent4 message4= "{! v.message3 }" /> 
+</aura:component>

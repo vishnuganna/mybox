@@ -1,0 +1,6 @@
+<aura:component >
+	    <aura:attribute name ="message1" type ="String" default ="component2"/>
+    
+	{! v.message1 }
+    <c:HelloWorldComponent3 message3= "{! v.message1 }" />  
+</aura:component>

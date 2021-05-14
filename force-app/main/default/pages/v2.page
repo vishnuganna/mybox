@@ -1,0 +1,12 @@
+<apex:page sidebar="false" standardController="account" renderAs="pdf">
+<apex:form >
+<apex:pageBlock >
+<apex:pageBlockSection >
+<apex:inputfield value="{!account.name}"> </apex:inputfield>
+<apex:inputfield value="{!account.phone}"></apex:inputfield>
+<apex:outputfield value="{!account.Fax}"></apex:outputfield>
+<apex:inputText value="{!account.Rating}"></apex:inputText>>
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

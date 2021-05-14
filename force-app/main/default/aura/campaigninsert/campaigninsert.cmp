@@ -1,0 +1,31 @@
+<aura:component controller="campinglight" implements="force:appHostable">
+    <aura:attribute name="Camping" Type="Camping_Item__c" default="{ 'sobjectType': 'Camping_Item__c', 'Name' : '' , 'Packed__c' :'',
+                                                                   		'Price__c' : '', 'quantity__c' :''	}"/>
+    
+    <div class="slds-form-element">
+            <label class="slds-form-element__label" for="inputSample2">Camping item Name</label>
+            <div class="slds-form-element__control">
+    <force:inputField aura:id="CampingItemName"  value="{!v.Camping.Name}"/>
+        </div>
+        
+      
+            <label class="slds-form-element__label" for="inputSample2">Packed</label>
+            <div class="slds-form-element__control">
+    <force:inputField aura:id="Packed"  value="{!v.Camping.Packed__c}"/>
+            </div>
+            
+           
+            <label class="slds-form-element__label" for="inputSample2">Price</label>
+            <div class="slds-form-element__control">
+    <force:inputField aura:id="Price"  value="{!v.Camping.Price__c}"/>
+             </div>
+        
+ 
+            <label class="slds-form-element__label" for="inputSample2">Quantity</label>
+            <div class="slds-form-element__control">
+    <force:inputField aura:id="Quantity" value="{!v.Camping.quantity__c}"/>
+        </div>
+       </div> 
+     <ui:button class="form-control" aura:id="button" label="Save" press="{!c.save}"/>
+    
+</aura:component>

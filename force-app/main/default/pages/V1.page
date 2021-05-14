@@ -1,0 +1,29 @@
+<apex:page controller="c2">
+<apex:form >
+ <apex:tabpanel switchType="client" >
+ <apex:tab label="Closed Won">
+<apex:pageBlocK >
+ <apex:pageBlockSection >
+ <apex:pageBlockTable value="{!opp}" var="o">
+ <apex:Column value="{!o.id}"/>
+<apex:Column value="{!o.Name}"/>
+<apex:Column value="{!o.StageName}"/>
+  </apex:pageBlockTable>
+ </apex:pageBlockSection>
+ </apex:pageBlock>
+ </apex:tab>
+ <apex:tab label="Closed Lost">
+ <apex:pageBlock >
+ <apex:pageBlockSection >
+ <apex:pageBlockTable value="{!opp1}" var="o">
+ <apex:Column value="{!o.id}"/>
+<apex:Column value="{!o.Name}"/>
+<apex:Column value="{!o.StageName}"/>
+ </apex:pageBlockTable>
+ </apex:pageBlockSection>
+ </apex:pageBlock>
+ </apex:tab> 
+ 
+</apex:tabpanel>
+ </apex:form>
+ </apex:page>

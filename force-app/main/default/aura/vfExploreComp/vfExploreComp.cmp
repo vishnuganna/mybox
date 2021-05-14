@@ -1,0 +1,9 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,flexipage:availableForAllPageTypes" access="global">
+	
+    <aura:attribute name="message" type="String" />
+    <aura:attribute name="baseDomain" type="String" default="ganna-dev-ed.my.salesforce.com"/>
+    <lightning:button label="SendTo Vf" onclick="{!c.SendToVf}" />
+    
+    <iframe aura:id="vframe"
+            src="{! 'https://' + v.baseDomain + '/apex/eVfComp' }" />
+</aura:component>

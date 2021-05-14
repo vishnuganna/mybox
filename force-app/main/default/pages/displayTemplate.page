@@ -1,0 +1,5 @@
+<apex:page controller="templateExample">
+    <apex:include pageName="formTemplate"/>
+    <apex:actionSupport event="onClick"                         action="{!save}"                        rerender="greeting"/>
+    <apex:outputText id="greeting" rendered="{!showGreeting}" value="Hello {!nameField}"/>
+</apex:page>

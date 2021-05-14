@@ -1,0 +1,7 @@
+<aura:component >
+    
+    <aura:registerevent name="eApp"
+                        Type="c:eEventApp" />
+    <lightning:button label="Click" onclick="{! c.clickMe }"/>
+	
+</aura:component>

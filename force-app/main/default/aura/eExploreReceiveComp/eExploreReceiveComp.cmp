@@ -1,0 +1,7 @@
+<aura:component >
+	
+    <aura:attribute name="finalmessage" type="String" />
+    <aura:handler event="c:eEventApp" action="{! c.handleReceive }" />
+    
+    {!v.finalmessage }
+</aura:component>

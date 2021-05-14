@@ -1,0 +1,18 @@
+<apex:page standardController="Account">
+<apex:pageBlock title="Hello {!$User.FirstName} {!$User.LastName}!">
+We are viewing the Contacts for this <b>{!account.name}</b> Account.
+</apex:pageBlock>
+<apex:pageBlock title="Contacts">
+<apex:pageBlockTable value="{!account.Contacts}" var="con">
+<apex:column value="{!con.Name}"/>
+<apex:column value="{!con.Lastname}"/>
+<apex:column value="{!con.Phone}"/>
+<apex:column value="{!con.Title}"/>
+</apex:pageBlockTable>
+</apex:pageBlock>
+<apex:pageBlock title="Opportunity">
+<apex:pageBlockTable value="{!account.Opportunities}" var="opp">
+<apex:column value="{!opp.Name}"/>
+</apex:pageBlockTable>
+</apex:pageblock>
+</apex:page>

@@ -1,0 +1,27 @@
+<template>
+    <lightning-button-menu alternative-text="Account Fields">
+        <lightning-menu-item label="Name" value="selectName" icon-name="utility:table">
+        </lightning-menu-item>
+        <lightning-menu-item label="Type">
+        </lightning-menu-item>
+        <lightning-menu-item label="Rating">
+        </lightning-menu-item>
+        <lightning-menu-item label="Phone">
+        </lightning-menu-item>
+        <lightning-menu-item label="Website">
+        </lightning-menu-item>
+    </lightning-button-menu>
+
+    <lightning-layout>
+
+        <div style="height: 300px;">
+            <template if:true={accList}>
+                <lightning-datatable data={accList} columns={columns} key-field="Id">
+                </lightning-datatable>
+            </template>
+        </div>
+        <template if:true={error}>
+            {error}
+        </template>
+    </lightning-layout>
+</template>

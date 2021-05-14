@@ -1,0 +1,13 @@
+<aura:component >
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col">
+            <span> Hello </span>
+        </div>
+        <div class="slds-col">
+            <span>Sree</span>
+        </div>
+        <div class="slds-col">
+            <span>Vishnu</span>
+        </div>
+    </div>
+</aura:component>

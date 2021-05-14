@@ -1,0 +1,18 @@
+<apex:page controller="c3">
+    <apex:form >
+        <apex:outputLabel value="Opportunity Name"/>
+        <apex:InputText />
+        <apex:commandButton value="Closed Won" action="{!closedwon}"/>
+        <apex:commandButton value="Closed lost" action="{!closedlost}"/>
+        <apex:commandButton value="Needs Analysis" action="{!NeedsAnalysis}"/>
+        
+             <apex:pageBlock >
+                <apex:pageBlockTable value="{!opp}" var="a">
+                    <apex:column value="{!a.Name}"/>
+                     <apex:column value="{!a.Type}"/>
+                      <apex:column value="{!a.StageName}"/>            
+                </apex:pageBlockTable>             
+             </apex:pageBlock> 
+            
+    </apex:form>
+  </apex:page>

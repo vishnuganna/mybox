@@ -1,0 +1,51 @@
+<apex:page controller="ACTListController"
+ showHeader="true"
+  sidebar="true">
+
+<apex:form target="_top">
+
+<apex:pageBlock title="Items to Approve" mode="detail">
+ 
+               <!--<apex:outputText rendered="{!renderProcess == false}">
+
+                    You have no Pending Items to approve..
+ 
+               </apex:outputText>-->
+              
+                <apex:pageBlockTable value="{!process}" var="task" >
+
+                
+                    <!--<apex:column headerValue="Type">
+
+                        <apex:outputLink target="_top" value="{!URLFOR($Action.Task.View, task.Id)}">
+
+                            <apex:outputText value="{!task.Id}"/>
+
+                        </apex:outputLink>
+ 
+                   </apex:column>-->
+  
+                  <apex:column headerValue="Action">
+
+                    <apex:outputLink target="_top" value="p/process/ProcessInstanceWorkitemWizardStageManager?id={!task.Id}">Approve/Reject</apex:outputLink>
+
+                    
+                    </apex:column>
+
+                    <apex:column headerValue="Related To" value="{!task.processinstance.targetobjectid}"/>
+
+                    <apex:column headerValue="Type" value="{!task.ProcessInstance.TargetObject.Type}"/>
+ 
+             
+                    <apex:column headerValue="Date Submitted" value="{!task.CreatedDate}"/>
+                                 <apex:column headerValue="Date Submitted1" value="{!task.ProcessInstance.CreatedDate}"/>
+                                  <apex:column headerValue="PID" value="{!task.ProcessInstanceId}"/>
+
+                    
+                    </apex:pageBlockTable> 
+          
+                </apex:pageBlock>
+
+</apex:form>
+
+</apex:page>

@@ -1,0 +1,21 @@
+<apex:page >
+
+<div id='msg'>
+This is visualforce Page
+</div>
+
+<script>
+    var lexOrigin = 'https://ganna-dev-ed.my.salesforce.com/'
+    window.addEventListener {
+        "message",
+        function(event){
+                if(event.origin != lexOrigin)
+                return;
+        }
+        document.getElementById("greeting").value = event.data;
+        console.log(event.data);
+
+    },
+    false);
+</script>
+</apex:page>

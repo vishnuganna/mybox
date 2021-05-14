@@ -1,0 +1,6 @@
+<aura:component >
+	
+	    <aura:attribute name ="message4" type ="String" default ="component4"/>
+	{!v.message4}
+
+</aura:component>
